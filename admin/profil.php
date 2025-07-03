@@ -29,7 +29,7 @@ $admin = $stmt->fetch();
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body text-center">
-                            <img src="../uploads/profil/<?= $admin['foto_profil'] ?? 'admin-default.png' ?>" 
+                            <img src="../uploads/profil/<?= $admin['images.jpeg'] ?? 'images.jpeg' ?>" 
                                  class="img-thumbnail rounded-circle mb-3" 
                                  width="200" 
                                  alt="Foto Profil">
