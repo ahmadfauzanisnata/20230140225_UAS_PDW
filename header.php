@@ -35,7 +35,7 @@
                     <?php if (isLoggedIn()): ?>
                         <?php if (isAdmin()): ?>
                             <li class="nav-item">
-                                <a class="nav-link" href="admin/dashboard.php">Dashboard</a>
+                                <a class="nav-link" href="dashboard.php">Dashboard</a>
                             </li>
                         <?php else: ?>
                             <li class="nav-item">
