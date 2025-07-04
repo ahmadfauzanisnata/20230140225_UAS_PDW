@@ -64,7 +64,7 @@
                                     <i class="bi bi-person"></i> Profil
                                 </a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="<?= isAdmin() ? '../logout.php' : 'profil.php' ?>">
+                                <li><a class="dropdown-item" href="<?= isAdmin() ? '../logout.php' : '../logout.php' ?>">
                                     <i class="bi bi-box-arrow-right"></i> Logout
                                 </a></li>
                             </ul>
