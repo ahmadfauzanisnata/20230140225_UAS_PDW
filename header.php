@@ -29,30 +29,6 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <?php if (isLoggedIn()): ?>
-                        <?php if (isAdmin()): ?>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../index.php">Beranda</a>
-                            </li>
-                        <?php else: ?>
-                            <li class="nav-item">
-                                <a class="nav-link" href="dashboard.php">Beranda</a>
-                            </li>
-                        <?php endif; ?>
-                    <?php endif; ?>
-                    <?php if (isLoggedIn()): ?>
-                        <?php if (isAdmin()): ?>
-                            <li class="nav-item">
-                                <a class="nav-link" href="dashboard.php">Dashboard</a>
-                            </li>
-                        <?php else: ?>
-                            <li class="nav-item">
-                                <a class="nav-link" href="dashboard.php">Dashboard</a>
-                            </li>
-                        <?php endif; ?>
-                    <?php endif; ?>
-                </ul>
                 <ul class="navbar-nav">
                     <?php if (isLoggedIn()): ?>
                         <li class="nav-item dropdown">
