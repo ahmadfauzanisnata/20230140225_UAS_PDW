@@ -24,7 +24,7 @@ $user = $stmt->fetch();
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-4 text-center">
-                            <img src="../main/profil/<?= $user['foto_profil'] ?? 'hy.jpeg' ?>" 
+                            <img src="../main/profil/<?= $user['foto_profil'] ?? 'images.jpeg' ?>" 
                                  class="img-thumbnail rounded-circle mb-3" 
                                  width="200" 
                                  alt="Foto Profil">
