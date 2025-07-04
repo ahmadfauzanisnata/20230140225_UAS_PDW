@@ -30,18 +30,18 @@ if (!file_exists($fotoPath)) {
                 <div class="card-body">
                     <div class="row">
                       <div class="col-md-4 text-center">
-        <img src="<?= $fotoPath ?>" 
-             class="img-thumbnail rounded-circle mb-3" 
-             width="200" 
-             alt="Foto Profil">
-        <form action="upload_profil.php" method="post" enctype="multipart/form-data">
-    <div class="mb-3">
-        <label for="foto_profil" class="form-label">Pilih Foto Profil</label>
-        <input type="file" class="form-control" id="foto_profil" name="foto_profil" required>
-        <div class="form-text">Format: JPG, PNG (Maks. 2MB)</div>
+                <img src="<?= $fotoPath ?>" 
+                    class="img-thumbnail rounded-circle mb-3" 
+                     width="200" 
+                    alt="Foto Profil">
+         <form action="upload_profil.php" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+            <label for="foto_profil" class="form-label">Pilih Foto Profil</label>
+            <input type="file" class="form-control" id="foto_profil" name="foto_profil" required>
+            <div class="form-text">Format: JPG, PNG (Maks. 2MB)</div>
     </div>
     <button type="submit" class="btn btn-primary">Upload Foto</button>
-</form>
+        </form>
     </div>
                         <div class="col-md-8">
                             <table class="table table-bordered">
