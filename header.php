@@ -24,17 +24,7 @@
             <a class="navbar-brand" href="index.php">
                 <i class="bi bi-journal-bookmark"></i> SIMPRAK
             </a>
-            <?php if (isLoggedIn()): ?>
-                        <?php if (isAdmin()): ?>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../index.php">SIMPRAK</a>
-                            </li>
-                        <?php else: ?>
-                            <li class="nav-item">
-                                <a class="nav-link" href="dashboard.php">Beranda</a>
-                            </li>
-                        <?php endif; ?>
-                    <?php endif; ?>
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -74,7 +64,7 @@
                                     <i class="bi bi-person"></i> Profil
                                 </a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="logout.php">
+                                <li><a class="dropdown-item" href="<?= isAdmin() ? '../logout.php' : 'profil.php' ?>">
                                     <i class="bi bi-box-arrow-right"></i> Logout
                                 </a></li>
                             </ul>
