@@ -35,11 +35,13 @@ if (!file_exists($fotoPath)) {
              width="200" 
              alt="Foto Profil">
         <form action="upload_profil.php" method="post" enctype="multipart/form-data">
-            <div class="mb-3">
-                <input type="file" class="form-control" name="foto_profil" accept="image/*">
-            </div>
-            <button type="submit" class="btn btn-primary">Ubah Foto</button>
-        </form>
+    <div class="mb-3">
+        <label for="foto_profil" class="form-label">Pilih Foto Profil</label>
+        <input type="file" class="form-control" id="foto_profil" name="foto_profil" required>
+        <div class="form-text">Format: JPG, PNG (Maks. 2MB)</div>
+    </div>
+    <button type="submit" class="btn btn-primary">Upload Foto</button>
+</form>
     </div>
                         <div class="col-md-8">
                             <table class="table table-bordered">
