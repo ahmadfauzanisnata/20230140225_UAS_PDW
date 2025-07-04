@@ -39,7 +39,7 @@
                             </li>
                         <?php else: ?>
                             <li class="nav-item">
-                                <a class="nav-link" href="mahasiswa/dashboard.php">Dashboard</a>
+                                <a class="nav-link" href="dashboard.php">Dashboard</a>
                             </li>
                         <?php endif; ?>
                     <?php endif; ?>
