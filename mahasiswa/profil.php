@@ -9,6 +9,12 @@ include '../header.php';
 $stmt = $pdo->prepare("SELECT * FROM users WHERE id = ?");
 $stmt->execute([$_SESSION['user_id']]);
 $user = $stmt->fetch();
+
+// Debugging - tampilkan path foto
+$fotoPath = '../uploads/profil/' . ($user['foto_profil'] ?? 'default.jpg');
+if (!file_exists($fotoPath)) {
+    $fotoPath = '../assets/images/default-profile.jpg'; // Fallback image
+}
 ?>
 
 <div class="container-fluid">
@@ -23,12 +29,18 @@ $user = $stmt->fetch();
             <div class="card">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-md-4 text-center">
-                            <img src="../main/profil/<?= $user['foto_profil'] ?? 'images.jpeg' ?>" 
-                                 class="img-thumbnail rounded-circle mb-3" 
-                                 width="200" 
-                                 alt="Foto Profil">
-                        </div>
+                      <div class="col-md-4 text-center">
+        <img src="<?= $fotoPath ?>" 
+             class="img-thumbnail rounded-circle mb-3" 
+             width="200" 
+             alt="Foto Profil">
+        <form action="upload_profil.php" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <input type="file" class="form-control" name="foto_profil" accept="image/*">
+            </div>
+            <button type="submit" class="btn btn-primary">Ubah Foto</button>
+        </form>
+    </div>
                         <div class="col-md-8">
                             <table class="table table-bordered">
                                 <tr>
