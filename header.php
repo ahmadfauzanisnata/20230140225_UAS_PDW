@@ -22,6 +22,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand" href="index.php">
+                href="<?= isAdmin() ? '../index.php' : '../index.php' ?>">
                 <i class="bi bi-journal-bookmark"></i> SIMPRAK
             </a>
             
