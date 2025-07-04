@@ -14,7 +14,6 @@ if (isLoggedIn()) {
 $title = "SIMPRAK - Sistem Informasi Praktikum";
 include 'header.php';
 ?>
-
 <style>
     :root {
         --primary-color: #4361ee;
@@ -30,6 +29,13 @@ include 'header.php';
         line-height: 1.6;
         color: var(--dark-color);
         overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
     }
     
     .hero-section {
@@ -51,9 +57,17 @@ include 'header.php';
         z-index: 0;
     }
     
+    .hero-section .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    
     .hero-section .row {
         position: relative;
         z-index: 1;
+        margin-left: 0;
+        margin-right: 0;
     }
     
     .hero-section h1 {
@@ -72,6 +86,8 @@ include 'header.php';
         box-shadow: 0 15px 30px rgba(0,0,0,0.2);
         transform: perspective(1000px) rotateY(-10deg);
         transition: all 0.3s ease;
+        max-width: 100%;
+        height: auto;
     }
     
     .hero-section img:hover {
@@ -113,6 +129,8 @@ include 'header.php';
     
     .features-section {
         padding: 5rem 0;
+        max-width: 1200px;
+        margin: 0 auto;
     }
     
     .feature-card {
